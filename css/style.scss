@@ -15,7 +15,11 @@ body{
     width: 100%;
     font-family: axiforma-Light;
 }
-
+  
+::selection {
+    color: rgb(255, 255, 255);
+    background: rgb(58, 105, 244);
+}
 
 #particles-js{
     width: 100%;
@@ -59,7 +63,8 @@ body{
 .btn{
     width: 150px;
     height: 42px;
-    background-color: #ff9933;
+    // background-color: #ff9933;
+    background-color: #28a745!important;
     outline: none;            
     color: #ffffff;
     border: 0;
@@ -339,10 +344,14 @@ header {
             // color: #ff9933;
             // color: #e6e5e4;
             margin: 20px 0px;
-            // font-family: axiforma-Heavy;
+            font-family: axiforma-Heavy;
+        }
+        .home-title2{
+            font-size: 24px;
+            margin: 18px 0px;
         }
         .home-subtitle{
-            // color: #ff9933;
+            color: #363636;
         }
         // .home-shape{
         //     @include xsm{
@@ -359,6 +368,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
+        height: 100%;
         .home-right-img{
             width: 50%;
             animation: flower1 20s linear infinite;
@@ -789,9 +799,11 @@ header {
 @keyframes flower1{
     0% {
         transform: rotate(0deg);
+        filter: saturate(0);
     }
     100%{
         transform: rotate(360deg);
+        filter: saturate(15);
     }
 }
 @keyframes ror{
